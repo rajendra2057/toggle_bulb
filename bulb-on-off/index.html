@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle-bulb</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .btn {
+            margin-top: 2px;
+            padding: 15px;
+            background-color: green;
+            border-color: gainsboro;
+            border-radius: 15px;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img src="im/off.jpg" class="center" id="bulb">
+    <button class="center btn " id="btn">Turn on </button>
+</body>
+<script>
+    let bulb = document.getElementById('bulb');
+    let tbtn = document.getElementById('btn')
+    tbtn.addEventListener('click', togglebulb);
+    function togglebulb(e) {
+        if (tbtn.textContent.includes("on")) {
+            bulb.src = "im/on.jpg"
+            tbtn.textContent = "Turn off"
+        }
+        else {
+            bulb.src = "im/off.jpg"
+            tbtn.textContent = "Turn on"
+        }
+
+    }
+
+
+
+</script>
+
+</html>
